@@ -13,8 +13,16 @@
 
     </div>
     <textarea id="chatArea" readonly></textarea>
-    <input id="messageInput" type="text" placeholder="Type a message...">
+    <div id="inputContainer">
+        <input id="messageInput" type="text" placeholder="Type a message...">
+        <button id="attachButton">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M6.59 16.34L14.94 7.99c.78-.78.78-2.04 0-2.83-.78-.78-2.04-.78-2.83 0l-9.19 9.2a3.001 3.001 0 104.24 4.24l9.19-9.19a5.003 5.003 0 00-7.07-7.07l-7.8 7.8c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l7.8-7.8a3.001 3.001 0 014.24 4.24l-9.19 9.19c-.78.78-2.04.78-2.83 0-.78-.78-.78-2.04 0-2.83l8.35-8.35c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L6.59 16.34z"/>
+            </svg>
+        </button>
+    </div>
     <button id="sendButton">Send</button>
+    <button id="themeToggle">Switch to Dark Theme</button>
     <script type="module" src="script.js"></script>
 </body>
 </html>
