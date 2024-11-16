@@ -1,18 +1,15 @@
 const localVideo = document.getElementById('localVideo');
+const remoteVideo = document.getElementById('remoteVideo');
+
 
 import { io } from "https://cdn.socket.io/4.8.0/socket.io.esm.min.js";
 const socket = io();
 
 const config = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
 
-const container = document.getElementById("video-container")
 
 async function makeCall() {
     const peerConnection = new RTCPeerConnection(config);
-    const video = document.createElement("video");
-    video.autoplay = true
-    container.appendChild(video)
-    
     const remoteStream = new MediaStream();
     remoteVideo.srcObject = remoteStream;
 
