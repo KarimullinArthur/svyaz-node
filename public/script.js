@@ -9,15 +9,15 @@ const container = document.getElementById("video-container")
 
 async function makeCall() {
     const peerConnection = new RTCPeerConnection(config);
+    const video = document.createElement("video");
+    video.autoplay = true
+    container.appendChild(video)
     
+    const remoteStream = new MediaStream();
+    remoteVideo.srcObject = remoteStream;
 
     peerConnection.ontrack = event => {
-        const video = document.createElement("video");
-        video.autoplay = true
-        container.appendChild(video)
-        
-        const remoteStream = new MediaStream();
-        remoteVideo.srcObject = remoteStream;
+
         remoteStream.addTrack(event.track);
     };
     peerConnection.onicecandidate = event => {
